@@ -136,3 +136,35 @@ A **command-line tool** that helps developers perform various tasks, such as:
 - Running database migrations
 - Generating boilerplate code
 - Managing queues and scheduled tasks
+
+# Composer
+
+## What is Composer?
+
+Composer is a **dependency management tool** for PHP. It allows you to **declare the libraries** your project depends on, and it will **manage (install/update) them** for you.
+
+## Key Features of Composer:
+
+- **Manages Dependencies** – Automatically installs and updates required PHP libraries.
+- **Framework Support** – Helps create projects with a **maintained framework** like Laravel.
+- **Third-Party Libraries** – Easily install and integrate **third-party packages**.
+- **Version Control** – Ensures compatibility by managing package versions.
+
+## Usage:
+
+- Install dependencies with:
+  ```sh
+  composer install
+  ```
+
+````
+
+# Installing a New Laravel Project
+
+## Using Composer
+To create a new Laravel project, run the following command:
+
+```sh
+composer create-project laravel/laravel project-name
+
+````
