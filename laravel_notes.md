@@ -168,3 +168,47 @@ To create a new Laravel project, run the following command:
 composer create-project laravel/laravel project-name
 
 ````
+
+# Laravel Artisan Commands
+
+## Show All Artisan Commands
+
+```sh
+php artisan list
+```
+
+## Create a Controller in Laravel
+
+```sh
+php artisan make:controller ControllerName
+```
+
+## Create a Model in Laravel
+
+```sh
+php artisan make:model ModelName
+```
+
+## Clear Cache in Laravel
+
+```sh
+php artisan cache:clear
+```
+
+## Clear Routes Cache in Laravel
+
+```sh
+php artisan route:clear
+```
+
+## Clear Config Cache in Laravel
+
+```sh
+php artisan config:clear
+```
+
+## Optimize Application (Clears Routes, Configs & Resources)
+
+```sh
+php artisan optimize
+```
