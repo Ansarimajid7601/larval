@@ -212,3 +212,116 @@ php artisan config:clear
 ```sh
 php artisan optimize
 ```
+
+# Laravel Aggregate Functions
+
+In Laravel, aggregate functions are used to perform calculations on a set of values and return a single value.
+
+## Some Basic Functions:
+
+- **count()** – Returns the number of rows in a specified table.
+- **max()** – Returns the largest value of a specified column.
+- **min()** – Returns the smallest value of a specified column.
+- **avg()** – Returns the average value of a specified column.
+- **sum()** – Returns the sum of all values in a specified column.
+
+---
+
+## `name()` Method in Laravel
+
+The `name()` method is used to assign a name to a route.
+
+```php
+Route::get('urlName', [ControllerName::class, 'methodName'])->name('routeName');
+```
+
+---
+
+## Helper in Laravel
+
+Helper in Laravel is a globally available function that simplifies common tasks, such as string manipulation and reusable functions.
+
+### Laravel provides built-in functions like:
+
+- `url()`
+- `route()`
+- `asset()`
+- `config()`
+- `env()`
+- `csrf_token()`
+- `session()`
+- `old()`
+- `trans()`
+
+### Custom Helper in Laravel:
+
+1. Create a folder in the `app` directory: `app/Helpers`
+2. Create a file `Helpers.php`
+3. Autoload it in the `composer.json` file
+
+---
+
+## Session in Laravel
+
+A session in Laravel is a way to store user data across multiple requests. It allows data to persist between pages without using cookies or a database for every request.
+
+### How Session Works:
+
+1. Laravel assigns a unique ID to each session.
+2. Data (e.g., authentication status, messages) is stored temporarily.
+
+### Storing Data in Session:
+
+```php
+session()->put('sessionName', 'sessionValue');
+session()->put('key', 'value');
+session()->put('key', ['value1', 'value2']);
+```
+
+### Get Session Data:
+
+```php
+session('sessionName');
+session()->get('sessionName');
+```
+
+### Remove Session Data:
+
+```php
+session()->forget('sessionName'); // Remove single session
+session()->flush(); // Remove all sessions
+```
+
+---
+
+## Laravel Maintenance Mode
+
+Maintenance mode is used only during development or maintenance time.
+
+### Enable Maintenance Mode:
+
+```sh
+php artisan down
+```
+
+### Disable Maintenance Mode:
+
+```sh
+php artisan up
+```
+
+---
+
+## How to Create a Custom 404 Page in Laravel
+
+Create a custom 404 error page by adding the following file:
+
+```
+resource/views/errors/404.blade.php
+```
+
+---
+
+## Middleware in Laravel
+
+Middleware acts as a filter for HTTP or HTTPS requests before they reach your application logic.
